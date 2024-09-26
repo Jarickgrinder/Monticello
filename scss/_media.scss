@@ -1,0 +1,28 @@
+@media screen and (max-width: 1200px) {
+
+    .html {
+        font-size: 1em;
+    }
+      
+    .section {
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .horizon_flex_100 {
+        flex-wrap: wrap;
+    }
+
+    .horizon_flex {
+        flex-wrap: wrap;
+    }
+
+    .projects_objects {
+        flex-wrap: wrap;
+    }
+
+    .img, picture {
+      max-width: 100%;
+    }
+
+}

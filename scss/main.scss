@@ -1,0 +1,356 @@
+@import "mixins";
+@import "media";
+@import "fonts";
+@import "slider";
+
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+
+body{
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+.header{
+    background-image: linear-gradient(243.43deg, #7E5AFF 16.9%, #55B7FF 83.27%);
+    position: relative;
+    height: 800px;
+    margin-bottom: 200px;
+
+    &_navigation{
+        position: absolute;
+        padding-top: 50px;
+        margin-bottom: 200px;
+        margin-left: 300px;
+        margin-right: 200px;
+        z-index: 1;
+    }
+}
+
+.slick-initialized .slick-slide{
+    display: flex!important;
+    // height: auto !important;
+}
+
+.menu {
+    @include flex(space-between, start, 60px,);
+    align-items: center;
+
+    &_link{
+        text-decoration: none;
+    }
+
+    &_link:hover{
+        color: #000
+    }
+}
+
+.social{
+    @include flex(space-between, start, 20px,);
+}
+
+.section{
+    margin-top: 100px;
+    margin-bottom: 150px;
+    padding-right: 215px;
+    padding-left: 215px;
+}
+
+.projects_objects{
+    @include flex(space-between, end, 70px, );
+}
+
+.projects_text{
+    width: 476px;
+    height: 350px;
+}
+
+.projects_btn{
+    margin-bottom: 50px;
+}
+
+.rectangle_blue{
+    position: relative;
+}
+
+.rectangle_blue::before{
+    content: "" ;
+    position: absolute;
+    background: #55B7FF;
+    width: 585px;
+    height: 470px;
+    bottom: 57;
+    left: -215;
+    z-index: -1;
+}
+
+.rectangle_purple{
+    position: relative;
+}
+
+.rectangle_purple::after{
+    content: "" ;
+    position: absolute;
+    background: #7E5AFF;
+    width: 585px;
+    height: 470px;
+    bottom: 57px;
+    right: -215;
+    z-index: -1;
+}
+
+.marker::before{
+    content: url(../assets/img/marker.png);
+    padding: 10px;
+    }
+
+.news{
+    background-image: url(../assets/img/Background_news.png);
+    height: 978px;
+
+    ul.slick-dots{
+    position: absolute;
+    top: 110%;
+    right: 50%;
+    left: 50%;
+    flex-direction: row;
+    }
+
+    .slick-slide{
+        height: auto !important;
+    }
+
+    &_lenta{
+        @include flex(space-between, center, 30px, );
+        height: auto
+        !important
+    }
+
+    &_article{
+        background-color: #fff;
+        width: 370px;
+        height: 514px !important;
+        @include flex(space-between, start, 10px, column);
+    }
+
+    &_author{
+        @include flex(space-between, center, 20px, );
+        padding-top: 40px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+    }
+
+    &_author_info{
+        @include flex(space-between, start, 10px, column);
+    }
+
+    &_author_image{
+        border-radius: 50px;
+    }
+}
+
+.wrapper{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 285px 285px 285px 285px ;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.item1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+footer::before{
+    position: absolute;
+    left: 415px;
+    bottom: 150px;
+}
+
+.footer{
+    position: relative;
+    background-image: url(../assets/img/Background_footer.png);
+    height: 549px;
+
+    &_form{
+        position: absolute;
+        left: 24%;
+        right: 24%;
+        top: -50%;
+        width: 830px;
+        height: 450px;
+        background-image: url(../assets/img/Background_form.png);
+        z-index: 1;
+    }
+
+    &_stuff{
+        @include flex(space-between, start, 10px,);
+        width: 770px;
+        padding-top: 200px;
+        margin: auto
+    }
+
+    &_credit{
+        @include flex(space-between, start, 40px, column);
+    }
+}
+
+.form_header{
+    padding-top: 100px;
+    position: relative;
+}
+
+.form_header::after{
+    content: "";
+    background: #2C4058;
+    position: absolute;
+    width: 100px;
+    bottom: 80px;
+    left: 45%;
+    height: 1px;
+    border: 1px;
+}
+
+.form_flex{
+    @include flex(space-between, start, 50px, );
+    padding-top: 40px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 80px;
+}
+
+.form_flex_2{
+    @include flex(space-between, start, 20px, column);
+    width: 300px;
+    height: 200px;
+}
+
+.input_long{
+    width: 300px;
+    padding: 15px 8px;
+    border: #fff;
+    border-bottom: 1px solid #2C4058;
+    opacity: 50%;
+}
+
+input:focus-visible{
+    outline: none;
+    opacity: 100%;
+}
+
+.form_img{
+    width: 20px ;
+    height: 20px;
+}
+
+.geo{
+    content: url(../assets/img/small_geo.png);
+}
+
+.phone{
+    content: url(../assets/img/small_phone.png);
+}
+
+.mail{
+    content: url(../assets/img/small_mail.png);
+}
+
+.clock{
+    content: url(../assets/img/small_clock.jpg);
+}
+
+.btn {
+    background-color: #fff;
+    padding: 15px;
+    width: 230px;
+    border-width: 1px;
+    border-color: #2C4058;
+    transition: all 0.3s;
+}
+
+.btn_form{
+    background-color: transparent;
+    width: 140px;
+    height: 50px;
+}
+
+.btn:hover{
+    background-color: #000000;
+    color: #fff;
+}
+
+.facebook:hover{
+    content: url(../assets/img/facebook_hover.png);
+    width: 40px;
+    height: 40px;
+}
+
+.twitter:hover{
+    content: url(../assets/img/twitter_hover.png);
+    width: 40px;
+    height: 40px;
+}
+
+.instagram:hover{
+    content: url(../assets/img/instagram_hover.png);
+    width: 40px;
+    height: 40px;
+}
+
+.heading{
+    text-align: center;
+}
+
+.heading_line{
+    position: relative;   
+}
+
+.heading_line::before{
+    content: "";
+    background: #2C4058;
+    position: absolute;
+    width: 100px;
+    bottom: 80px;
+    left: 30%;
+    height: 1px;
+    border: 1px;
+}
+
+.heading_line_news{
+    position: relative;   
+}
+
+.heading_line_news::before{
+    content: "";
+    background: #FFFFFF;
+    position: absolute;
+    width: 100px;
+    bottom: 70%;
+    left: 47%;
+    height: 1px;
+    border: 1px;
+}
+
+.horizon_flex{
+    @include flex(space-between, start, 10px,);
+}
+
+.horizon_flex_100{
+    @include flex(space-around, start, 100px,);
+}
+
+.column_flex{
+    @include flex(space-around, start, 20px, column);
+}
+
+.column_flex_100{
+    @include flex(space-around, center, 100px, column);
+}
+

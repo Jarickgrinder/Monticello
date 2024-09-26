@@ -1,0 +1,55 @@
+.menu_font{
+    @include font(Source Code Pro, 16px, 400, #FFFFFF, none);
+}
+.h1_font {
+    @include font(Montserrat, 80px, 700, #FFFFFF, none);
+}
+
+.h1_subfont {
+    @include font(Montserrat, 18px, 400, #FFFFFF, none);
+}
+
+.btn_font {
+    @include font(Montserrat, 16px, 400, #000000, none)
+}
+
+.h2_font{
+    @include font(Montserrat, 44px, 700, #2C4058, none);
+    margin: 0
+}
+
+.h3_font{
+    @include font(Montserrat, 22px, 400, #2C4058, none);
+    margin: 0
+}
+
+.news_heading_font{
+    @include font(Montserrat, 44px, 700, #FFFFFF, none);
+    padding: 100px
+}
+
+.news_article_font{
+    @include font(Montserrat, 22px, 700, #2C4058, none);
+    margin: 0px;
+    padding: 20px;
+    padding-bottom: 5px
+}
+
+.news_paragraph_font{
+    @include font(open_sans, 18px, 400, #2C4058, none);
+    margin: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.news_author_font{
+    @include font(Montserrat, 18px, 400, #2C4058, none)
+}
+
+.news_date_font{
+    @include font(Montserrat, 14px, 400, #55B7FF, none)
+}
+
+.footer_font{
+    @include font(Montserrat, 14px, 400, #FFFFFF, none);
+}
